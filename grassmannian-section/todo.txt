@@ -1,0 +1,33 @@
+Att göra:
+
+    Generera polynomen för kuben och kör i något CAS-program.
+
+    Lägg till fler kuber (ett lager till först). Sen kanske mer induktivt.
+    	- Räkna direkt med nullrum och matriser
+            ***
+            Nollrummen verkar inte stabiliseras.
+            8 punkter  : en  4x8  matris
+            12 punkter : en  8x12 matris
+            16 punkter : en 12x16 matris
+            20 punkter : en 16x20 matris
+            ***
+    	- Räkna med Grassmannians.
+            ***
+            Hoppat över detta då koordinaterna blir av respektive längder
+            70, 495, 1820, 4845. 
+            Den med 70 går nog att räkna på när programmet är klart.
+            (Koordinaterna är alltså genererade, men för bara fallet med 12 punkter skulle man fylla
+            en A4 med nollor ettor och tvåor.)
+            ***
+
+    Räkna fram matriser för två kuber i alla sex riktiningar.
+
+    Ta fram formel för matris för k kuber, sen k^2 kuber i ett 'plan', sen en kub av k^3 kuber.
+
+    För dessa matriser, ta fram ett sätt att räkna ut Grassmann-koordinat n.
+
+    Ta fram kombinatorisk formel för index som motsvarar koordinat n.
+    
+Senare:
+
+    Hitta punkter i R^4 och en projektion, så att resultatet är en kub (senare: "flera kuber") i R^3

@@ -1,0 +1,60 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amssymb, amsmath, amsfonts, amsthm}
+\usepackage{cite} % for citing from *.bib
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+
+\usepackage{tikz}
+
+\usetikzlibrary{arrows,matrix,fit}
+
+%% For theorems and the like: %%
+\theoremstyle{plain}
+\newtheorem{thm}[equation]{Theorem}
+\newtheorem{Lemma}[equation]{Lemma}
+\newtheorem{Proposition}[equation]{Proposition}
+\newtheorem{Corollary}[equation]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defi}[equation]{Definition}
+\newtheorem{Remark}[equation]{Remark}
+\newtheorem{Example}[equation]{Example}
+
+%% Document %%
+\begin{document}
+
+\begin{defi}
+	We say that two sequences of projection matrices \( (P^1, \ldots, P^k) \) and
+	\( (\hat{P}^1, \ldots, \hat{P}^k) \) are \emph{projectively equivalent} if there
+	exists an invertible matrix \( H \) and scalars \( \lambda_i \) such that
+	\[
+		\hat{P}^i = \lambda_i \cdot P^i H
+	\]
+	for all \( i \).
+\end{defi}
+
+\begin{defi}
+	Let \( P^i \) and \( \hat{P}^i \) be matrices of size \( (m_i + 1) \times (n+1) \).
+	Also let the two matrices \( P \) and \( \hat{P} \) be made of the \( k \) blocks \( P^i \)
+	and \( \hat{P}^i \) respectively. Then we say \( P \) and \( \hat{P} \) are
+	\emph{block projectively equivalent} if there exists an invertible matrix \( H \) of size
+	\( (n+1) \times (n+1) \) and scalar matrices \( \lambda_i I_i \) of size
+	\( (m_i + 1) \times (m_i + 1) \) so that
+	\[
+		\hat{P} = \text{diag}(\lambda_1 I_1, \ldots, \lambda_k I_k) P H.
+	\]
+\end{defi}
+
+\begin{thm}
+	Let \( P \) be a matrix with \( k \) blocks \( P^i \) of size \( (m_i+1) \times (n+1) \).
+	Also let \( (\alpha_1, \ldots, \alpha_k) \) be an ordered partition of \( n+1 \).
+	If at least one \( m_i \) is greater than one, then the matrix \( P \) is determined
+	up to block projective equivalence by the collection of its minors, chosen with
+	\( \alpha_i \) rows from each \( P^i \).
+\end{thm}
+
+\end{document}
